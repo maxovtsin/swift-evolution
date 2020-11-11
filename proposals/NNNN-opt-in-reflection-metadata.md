@@ -100,8 +100,10 @@ public protocol Reflectable {}
 
 public struct Mirror {
     // A new constructor that takes an object conforming to Reflectable protocol.
-    public init(reflecting subject: Reflectable) {
-        ...
+    public init<Subject : Reflectable>(
+        reflecting subject: Subject
+        ) {
+        // ...
     }
 }
 ```
